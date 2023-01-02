@@ -99,7 +99,7 @@ public class GAgent : MonoBehaviour {
         if(actionQueue != null && actionQueue.Count > 0)
         {
             currentAction = actionQueue.Dequeue();
-            if (currentAction.PrePerform()) ;
+            if(currentAction.PrePerform())
             {
                 if (currentAction.target == null && currentAction.targetTag != "")
                     currentAction.target = GameObject.FindWithTag(currentAction.targetTag);
