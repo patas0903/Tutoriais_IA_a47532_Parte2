@@ -1782,7 +1782,7 @@ MonoBehaviour:
   - key: FreeCubicle
     value: 1
   afterEffects:
-  - key: treatPatient
+  - key: patientPickedup
     value: 0
   agent: {fileID: 0}
   running: 0
@@ -1800,6 +1800,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actions: []
   currentAction: {fileID: 0}
+--- !u!114 &1090464312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090464307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace13d3ba3b68314382d2a4f6284452b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionName: Action
+  cost: 1
+  target: {fileID: 0}
+  targetTag: 
+  duration: 0
+  preConditions:
+  - key: patientPickedup
+    value: 0
+  afterEffects:
+  - key: treatPatient
+    value: 0
+  agent: {fileID: 0}
+  running: 0
 --- !u!1001 &1114647718
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4435,7 +4460,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4148183274457096313, guid: baeb1fa42d4ffdc4d887fe5c9f07657c, type: 3}
   m_PrefabInstance: {fileID: 6120536352134378840}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6120536352134378842
+--- !u!114 &6120536352134378843
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4444,19 +4469,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 6120536352134378841}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c38096f359570d45bbd696f0e0259e0, type: 3}
+  m_Script: {fileID: 11500000, guid: b4965fb53dcc0cf4b919524dbb53a9f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actionName: Get Treated
+  actionName: Go Home
   cost: 1
   target: {fileID: 0}
-  targetTag: 
+  targetTag: 'Home '
   duration: 0
   preConditions:
-  - key: atHospital
+  - key: isCured
     value: 0
   afterEffects:
-  - key: isTreated
+  - key: isHome
     value: 0
   agent: {fileID: 0}
   running: 0

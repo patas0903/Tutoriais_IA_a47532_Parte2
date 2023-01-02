@@ -53,13 +53,14 @@ public class GAgent : MonoBehaviour {
 
 
     // Update is called once per frame
-    void LateUpdate() {
-
-
+    void LateUpdate()
+    {
         if (currentAction != null && currentAction.running)
         {
-            if (currentAction.agent.hasPath && currentAction.agent.remainingDistance < 1f)
+            float distanceToTarget = Vector3.Distance(currentAction.target.transform.position, this.transform.position);
+            if (currentAction.agent.hasPath && distanceToTarget < 2f)
             {
+                Debug.Log("Distance to Goal: " + currentAction.agent.remainingDistance);
                 if(!invoked)
                 {
                     Invoke("CompleteAction", currentAction.duration);
