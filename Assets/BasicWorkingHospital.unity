@@ -4430,6 +4430,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: baeb1fa42d4ffdc4d887fe5c9f07657c, type: 3}
+--- !u!1 &6120536352134378841 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4148183274457096313, guid: baeb1fa42d4ffdc4d887fe5c9f07657c, type: 3}
+  m_PrefabInstance: {fileID: 6120536352134378840}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6120536352134378842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6120536352134378841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c38096f359570d45bbd696f0e0259e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionName: Get Treated
+  cost: 1
+  target: {fileID: 0}
+  targetTag: 
+  duration: 0
+  preConditions:
+  - key: atHospital
+    value: 0
+  afterEffects:
+  - key: isTreated
+    value: 0
+  agent: {fileID: 0}
+  running: 0
 --- !u!1001 &7197366530890070328
 PrefabInstance:
   m_ObjectHideFlags: 0

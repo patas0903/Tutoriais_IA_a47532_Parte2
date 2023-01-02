@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class GetPatient : GAction
 {
-    GameObject resource;
+   GameObject resource;
+
    public override bool PrePerform()
    {
         target = GWorld.Instance.RemovePatient();
@@ -38,7 +39,10 @@ public class GetPatient : GAction
     {
         GWorld.Instance.GetWorld().ModifyState("Waiting", -1);
         if (target)
+        {
             target.GetComponent<GAgent>().inventory.AddItem(resource);
+
+        }
         return true;
     }
 }
